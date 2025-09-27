@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: rgb(137, 235, 137);
+      }
+    </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECOHUB - Eco Habits pre študentov</title>
+  </head>
+
+  <body>
+    <h1>ECOHUB - Eco Habits pre študentov</h1>
+    <h3>
+      ECOHUB — Virtuálny denník spotreby vody, energie a odpadu. Študenti
+      zbierajú body a porovnávajú svoje výsledky v rebríčku.
+    </h3>
+    <button id="dotaznikButton">Zacat dotaznik</button>
+
+    <div id="questions">
+      <div id="question"></div>
+      <div id="options"></div>
+    </div>
+    <script>
+      document.addEventListener("DOMContentLoaded", () => {
+        const questionElement = document.getElementById("question");
+        const optionsElement = document.getElementById("options");
+        const questionBox = document.getElementById("questions");
+        const dotaznikButton = document.getElementById("dotaznikButton");
+        dotaznikButton.addEventListener("click", () => {
+          let currentQuestion = 0;
+          let body = 0;
+
+          const questions = [
+            {
+              question: "Ako dlho sa dnes sprchoval?",
+              options: {
+                "<5 min": 5,
+                "5-10 min": 3,
+                "10-15 min": 2,
+                ">15 min": 0,
+              },
+            },
+            {
+              question: "Vypol svetlo vždy, keď odchádzal?",
+              options: { Ano: 3, Nie: 0 },
+            },
+            { question: "Triedil odpad správne?", options: { Ano: 3, Nie: 0 } },
+          ];
+
+          function showQuestions() {
+            const q = questions[currentQuestion];
+            questionElement.innerText = q.question;
+            optionsElement.innerHTML = "";
+            Object.entries(q.options).forEach(([optionText, points]) => {
+              const button = document.createElement("button");
+              button.innerText = optionText;
+              optionsElement.appendChild(button);
+              button.addEventListener("click", () => selectAnswer(points));
+            });
+          }
+          function selectAnswer(points) {
+            body += points;
+            currentQuestion++;
+            if (currentQuestion < questions.length) {
+              showQuestions();
+            } else {
+              showResult();
+            }
+          }
+          function showResult() {
+            questionBox.innerHTML = `<p>Your score ${body}</p>`;
+
+            const img = document.createElement("img");
+            img.src = "joda_environment.jpg";
+            img.style.maxWidth = "200px";
+            questionBox.appendChild(img);
+          }
+          showQuestions();
+        });
+      });
+    </script>
+  </body>
+</html>
