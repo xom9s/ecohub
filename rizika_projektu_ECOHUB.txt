@@ -1,0 +1,31 @@
+Tabuľka rizík projektu ECOHUB
+
+1. Nedostatok finančných zdrojov
+- Popis: Projekt má obmedzený rozpočet a je závislý od grantov a sponzorov.
+- Pravdepodobnosť: Vysoká
+- Dopad: Vysoký
+- Stratégia riešenia: Aktívne vyhľadávanie grantov, crowdfunding, partnerstvá s firmami.
+
+2. Nedostatok technických skúseností
+- Popis: Tím nemá dostatočné skúsenosti s tvorbou webových platforiem.
+- Pravdepodobnosť: Stredná
+- Dopad: Vysoký
+- Stratégia riešenia: Spolupráca s univerzitou/IT firmou, využitie open-source a konzultantov.
+
+3. Nízka angažovanosť študentov
+- Popis: Riziko ľahostajnosti alebo nízkeho záujmu o aktivity.
+- Pravdepodobnosť: Stredná
+- Dopad: Stredný až vysoký
+- Stratégia riešenia: Gamifikácia, súťaže medzi školami, spolupráca s influencermi a školami.
+
+4. Nedostatok času členov tímu
+- Popis: Dobrovoľníci/študenti nemusia stíhať harmonogram.
+- Pravdepodobnosť: Vysoká
+- Dopad: Stredný
+- Stratégia riešenia: Projektový manažér, týždenné mítingy, jasné rozdelenie úloh.
+
+5. Neefektívna marketingová komunikácia
+- Popis: Marketing nemusí zasiahnuť cieľové publikum alebo byť dosť viditeľný.
+- Pravdepodobnosť: Stredná
+- Dopad: Stredný až vysoký
+- Stratégia riešenia: Marketingový plán, spolupráca s influencermi, sledovanie metrik (dosah, interakcie) a optimalizácia obsahu.
