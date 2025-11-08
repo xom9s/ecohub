@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <style>
+      body {
+        background-color: rgb(137, 235, 137);
+        font-family: sans-serif;
+      }
+
+      button {
+        background-color: white;
+        border-radius: 6px;
+      }
+
+      table {
+        border-collapse: collapse;
+        width: 95%;
+        margin: 20px 0;
+        background-color: white;
+        border-radius: 8px;
+        overflow: hidden;
+      }
+
+      th,
+      td {
+        border: 1px solid #ccc;
+        padding: 8px 10px;
+        text-align: left;
+      }
+
+      th {
+        background-color: #e7f6e7;
+        font-weight: bold;
+      }
+
+      caption {
+        caption-side: top;
+        text-align: left;
+        font-weight: bold;
+        margin-bottom: 5px;
+      }
+    </style>
+    <link rel="icon" type="image/png" href="/favicon.png" />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ECOHUB - Eco Habits pre študentov</title>
+  </head>
+
+  <body>
+    <h1>ECOHUB - Eco Habits pre študentov</h1>
+    <h3>
+      ECOHUB spája ekologické aj zdravotné návyky. Študenti zbierajú body za
+      šetrenie vody, energie, triedenie odpadu, športové aktivity a ďalšie
+      návyky, pričom sa budú porovnávať v rebríčku..
+    </h3>
+
+    <a href="SWOT_ECOHUB.pptx" download>SWOT ECOHUB</a><br /><br />
+    <a href="Ganttov_diagram.gantt" download>Ganttov diagram</a><br /><br />
+    <a href="business_plan.docx" download>Business plan</a><br /><br />
+    <a href="financna_analyza_ECOHUB.pdf" download>Finančná analýza</a><br /><br />
+    <a href="rizik_analyza.png" download>Rizik analýza</a><br /><br />
+
+    <!-- 📊 Metriky kvality -->
+    <table>
+      <caption>Metriky kvality projektu ECOHUB</caption>
+      <tr>
+        <th>Názov metriky</th>
+        <th>Popis</th>
+        <th>Cieľová hodnota</th>
+      </tr>
+      <tr>
+        <td>Miera aktívnej angažovanosti používateľov</td>
+        <td>
+          Percento registrovaných študentov, ktorí sa pravidelne zapájajú do
+          aktivít (min. 1 interakcia týždenne).
+        </td>
+        <td>&ge; 60 % aktívnych používateľov</td>
+      </tr>
+      <tr>
+        <td>Technická spoľahlivosť platformy</td>
+        <td>
+          Podiel času, kedy je ECOHUB funkčný bez výpadkov a kritických chýb
+          (merané monitoringom a hláseniami).
+        </td>
+        <td>&ge; 99 % dostupnosť mesačne, 0 kritických chýb</td>
+      </tr>
+      <tr>
+        <td>Miera spokojnosti používateľov</td>
+        <td>Priemerné hodnotenie po module (škála 1–5).</td>
+        <td>&ge; 4,2 / 5</td>
+      </tr>
+    </table>
+
+    <!-- 🧪 Testovacie scenáre -->
+    <table>
+      <caption>Testovacie scenáre projektu ECOHUB</caption>
+      <tr>
+        <th>Názov testu</th>
+        <th>Vstup / Kroky</th>
+        <th>Očakávaný výsledok</th>
+        <th>Dôvod testu</th>
+      </tr>
+      <tr>
+        <td>Funkčnosť registrácie používateľa</td>
+        <td>Vyplniť registračný formulár a potvrdiť e-mail.</td>
+        <td>Registrácia úspešná, e-mail doručený.</td>
+        <td>Overenie základnej funkcionality a GDPR súhlasu.</td>
+      </tr>
+      <tr>
+        <td>Nahrávanie a spustenie modulu</td>
+        <td>Administrátor pridá modul, používateľ ho otvorí.</td>
+        <td>Modul sa načíta a funguje bez chýb.</td>
+        <td>Kontrola stability obsahu v CMS systéme.</td>
+      </tr>
+      <tr>
+        <td>Gamifikačný systém – prideľovanie bodov</td>
+        <td>Používateľ dokončí kvíz alebo výzvu.</td>
+        <td>Body sa zobrazia v profile.</td>
+        <td>Overenie motivačného mechanizmu.</td>
+      </tr>
+      <tr>
+        <td>Test bezpečnosti prihlásenia používateľa</td>
+        <td>
+          Používateľ sa pokúsi prihlásiť so správnym aj nesprávnym heslom; 
+          systém má obmedziť počet pokusov a šifrovať prihlasovacie údaje.
+        </td>
+        <td>
+          Pri správnom hesle prihlásenie úspešné, pri viacerých neúspešných pokusoch 
+          je účet dočasne zablokovaný.
+        </td>
+        <td>
+          Overenie ochrany používateľských účtov a bezpečného spracovania dát.
+        </td>
+      </tr>
+      <tr>
+        <td>Zber spätnej väzby</td>
+        <td>Vyplniť hodnotenie po module.</td>
+        <td>Dáta sa uložia a zobrazia v reporte.</td>
+        <td>Meranie spokojnosti používateľov.</td>
+      </tr>
+      <tr>
+        <td>Výkon a načítanie platformy</td>
+        <td>Simulovať 50 používateľov naraz.</td>
+        <td>Načítanie do 3 sekúnd, bez chýb.</td>
+        <td>Overenie technickej pripravenosti.</td>
+      </tr>
+    </table>
+
+    <button id="dotaznikButton">začať</button>
+
+    <div id="questions">
+      <div id="question"></div>
+      <div id="options"></div>
+    </div>
+  </body>
+</html>
