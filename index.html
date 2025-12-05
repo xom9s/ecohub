@@ -1,46 +1,354 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="sk">
   <head>
+    <meta charset="UTF-8" />
+    <title>ECOHUB – Eco Habits pre študentov</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <style>
       body {
-        background-color: rgb(137, 235, 137); /* твій фон */
-        font-family: sans-serif;
+        margin: 0;
+        font-family: Arial, sans-serif;
+        background-color: #e9f7ec;
+        color: #2f4f2f;
+      }
+      header {
+        background: linear-gradient(90deg, #2ecc71, #27ae60);
+        color: white;
+        padding: 30px;
+        text-align: center;
+      }
+      section {
+        padding: 40px 10%;
+        background: white;
+        margin-bottom: 20px;
+        border-radius: 12px;
+      }
+      h2 {
+        color: #27ae60;
+        margin-bottom: 15px;
+      }
+      .features {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+        gap: 20px;
+      }
+      .card {
+        background: #f2fff6;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.08);
+      }
+      .downloads a {
+        display: block;
+        text-decoration: none;
+        background: #27ae60;
+        color: white;
+        padding: 10px;
+        margin: 8px 0;
+        border-radius: 8px;
+        width: fit-content;
+      }
+      .downloads a:hover {
+        background: #1e874b;
+      }
+      button {
+        padding: 12px 20px;
+        font-size: 16px;
+        border-radius: 8px;
+        border: none;
+        cursor: pointer;
+        background-color: #27ae60;
+        color: white;
+      }
+      button:hover {
+        background-color: #1e874b;
+      }
+      #questions {
+        margin-top: 20px;
+      }
+      #options button {
+        display: block;
+        margin: 10px 0;
+        width: 100%;
+      }
+      footer {
+        background: #1e874b;
+        color: white;
+        text-align: center;
+        padding: 20px;
+      }
+      nav {
+        position: fixed;
+        top: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        background: rgba(30, 135, 75, 0.95);
+        backdrop-filter: blur(6px);
+        padding: 14px 0;
+        z-index: 1000;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        gap: 18px;
       }
 
-      button {
-        background-color: white;
-        border-radius: 6px;
+      nav a {
+        color: white;
+        text-decoration: none;
+        font-weight: bold;
+        font-size: 15px;
+        position: relative;
+        margin: 0;
+      }
+
+      body {
+        padding-top: 70px;
       }
     </style>
-    <link rel="icon" type="image/png" href="/favicon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>ECOHUB - Eco Habits pre študentov</title>
   </head>
-
   <body>
-    <h1>ECOHUB - Eco Habits pre študentov</h1>
-    <h3>
-      ECOHUB spája ekologické aj zdravotné návyky. Študenti zbierajú body za
-      šetrenie vody, energie, triedenie odpadu, športové aktivity a ďalšie
-      návyky, pričom sa budú porovnávať v rebríčku..
-    </h3>
-    <a href="SWOT_ECOHUB.pptx" download>SWOT ECOHUB</a><br /><br />
-    <a href="Ganttov_diagram.gantt" download>Ganttov diagram</a><br /><br />
-    <a href="business_plan.docx" download>Business plan</a><br /><br />
-    <a href="financna_analyza_ECOHUB.pdf" download>Financna analyza</a>
-    <br />
-    <br />
-    <a href="rizik_analyza.png" download>Rizik analyza</a><br /><br />
-    <a href="metriky.png" download>testovacie scenare a metriky</a>
-    <br /><br />
+    <header>
+      <nav>
+        <a href="#projekt">O projekte</a>
+        <a href="#ciele">Ciele</a>
+        <a href="#swot">SWOT</a>
+        <a href="#rizika">Riziká</a>
+        <a href="#business">Business plán</a>
+        <a href="#metriky">Metriky</a>
+        <a href="#testovanie">Testovanie</a>
+        <a href="#gamifikacia">Gamifikácia</a>
+        <a href="#dotaznik">Dotazník</a>
+        <a href="#kontakt">Kontakt</a>
+      </nav>
 
-    <button id="dotaznikButton">začať</button>
-
-    <div id="questions">
-      <div id="question"></div>
-      <div id="options"></div>
-    </div>
+      <h1>ECOHUB</h1>
+      <p>Digitálna platforma pre ekologické a zdravé návyky študentov</p>
+    </header>
+    <section id="projekt">
+      <h2>🌱 O projekte</h2>
+      <p>
+        ECOHUB je moderná digitálna platforma, ktorá motivuje študentov k
+        ekologickému a zdravému životnému štýlu. Používatelia získavajú body za
+        úsporu vody, energie, triedenie odpadu, športovanie a zdravý pitný
+        režim.
+      </p>
+    </section>
+    <section id="ciele">
+      <h2>🎯 Ciele projektu</h2>
+      <div class="features">
+        <div class="card">Zvýšenie environmentálneho povedomia študentov</div>
+        <div class="card">Podpora zdravého životného štýlu</div>
+        <div class="card">Gamifikácia a motivácia cez body</div>
+        <div class="card">Tvorba lokálnej ekologickej komunity</div>
+      </div>
+    </section>
+    <section id="swot">
+      <h2>📊 SWOT Analýza projektu ECOHUB</h2>
+      <div class="features">
+        <div class="card">
+          <h3>✅ Strengths (Silné stránky)</h3>
+          <ul>
+            <li>Ideový a motivovaný tím</li>
+            <li>Popularita ekologickej témy</li>
+            <li>Rozdelenie procesov v tíme</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>⚠ Weaknesses (Slabé stránky)</h3>
+          <ul>
+            <li>Obmedzený rozpočet</li>
+            <li>Nedostatok času na vývoj</li>
+            <li>Nedostatočné skúsenosti s webom</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>🌱 Opportunities (Príležitosti)</h3>
+          <ul>
+            <li>Spolupráca s inými projektmi</li>
+            <li>Partnerstvá so školami</li>
+            <li>Rastúci záujem mládeže o ekológiu</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>❌ Threats (Hrozby)</h3>
+          <ul>
+            <li>Nízky záujem študentov</li>
+            <li>Vysoká konkurencia</li>
+            <li>Skeptický postoj niektorých škôl</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+    <section id="rizika">
+      <h2>⚠ Riziká projektu ECOHUB a ich riešenia</h2>
+      <div class="features">
+        <div class="card">
+          <h3>💰 Nedostatok finančných zdrojov</h3>
+          <p><b>Riešenie:</b> Granty, crowdfunding, spolupráca so sponzormi.</p>
+        </div>
+        <div class="card">
+          <h3>💻 Nedostatok technických skúseností</h3>
+          <p>
+            <b>Riešenie:</b> Spolupráca s IT firmami a univerzitami, využitie
+            open-source riešení.
+          </p>
+        </div>
+        <div class="card">
+          <h3>😕 Nízka angažovanosť študentov</h3>
+          <p>
+            <b>Riešenie:</b> Gamifikácia, súťaže, motivácia bodovým systémom.
+          </p>
+        </div>
+        <div class="card">
+          <h3>⏳ Nedostatok času členov tímu</h3>
+          <p>
+            <b>Riešenie:</b> Jasné rozdelenie úloh, projektový manažér,
+            pravidelné mítingy.
+          </p>
+        </div>
+        <div class="card">
+          <h3>📢 Slabý marketing</h3>
+          <p>
+            <b>Riešenie:</b> Spolupráca s influencermi a školami, aktívna
+            propagácia na sociálnych sieťach.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section id="business">
+      <h2>📘 Business plán projektu ECOHUB</h2>
+      <div class="features">
+        <div class="card">
+          <h3>🎯 Hlavný cieľ</h3>
+          <p>
+            Zvýšiť ekologickú informovanosť a aktívnu zapojenosť
+            <b>1000 študentov</b> v Košickom kraji o
+            <b>25 % do 12 mesiacov</b> prostredníctvom vzdelávacích modulov a
+            školských projektov.
+          </p>
+        </div>
+        <div class="card">
+          <h3>🧠 Podciele projektu</h3>
+          <ul>
+            <li>Vytvoriť plne funkčnú platformu do 3 mesiacov</li>
+            <li>Získať 500 aktívnych používateľov do 6 mesiacov</li>
+            <li>Podporiť aspoň 3 lokálne ekologické projekty do 9 mesiacov</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>👨‍🎓 Cieľová skupina</h3>
+          <ul>
+            <li>Študenti stredných škôl (15–18 rokov)</li>
+            <li>Učitelia a školy ako partneri</li>
+            <li>Mestá a environmentálne organizácie</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>💡 Unikátna hodnota projektu</h3>
+          <p>
+            ECOHUB premieňa reálne ekologické problémy regiónu na
+            <b>gamifikované výzvy</b>, vďaka čomu študenti nekonajú len
+            teoreticky, ale reálne pomáhajú prírode.
+          </p>
+        </div>
+        <div class="card">
+          <h3>💶 Ekonomická uskutočniteľnosť</h3>
+          <ul>
+            <li>Ročné náklady: <b>1 600 – 2 800 €</b></li>
+            <li>Zdroje: granty, sponzori, partnerstvá</li>
+            <li>Projekt je finančne reálne uskutočniteľný</li>
+          </ul>
+        </div>
+        <div class="card">
+          <h3>⚖ Legislatíva</h3>
+          <ul>
+            <li>Súlad s GDPR</li>
+            <li>Ochrana osobných údajov študentov</li>
+            <li>Spolupráca so školami formou dohôd</li>
+          </ul>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 20px">
+        <a href="business_plan.docx" download>
+          <button>📥 Stiahnuť celý Business plán</button>
+        </a>
+      </div>
+    </section>
+    <section id="metriky">
+      <h2>📊 Metriky kvality projektu ECOHUB</h2>
+      <div class="features">
+        <div class="card">
+          <h3>👥 Aktivita používateľov</h3>
+          <p>Minimálne <b>60 % používateľov</b> aktívnych každý týždeň.</p>
+        </div>
+        <div class="card">
+          <h3>🛠 Technická spoľahlivosť</h3>
+          <p>Dostupnosť systému <b>99 % mesačne</b> bez kritických chýb.</p>
+        </div>
+        <div class="card">
+          <h3>😊 Spokojnosť používateľov</h3>
+          <p>Priemerné hodnotenie <b>minimálne 4,2 / 5</b>.</p>
+        </div>
+      </div>
+    </section>
+    <section id="testovanie">
+      <h2>🧪 Testovacie scenáre systému</h2>
+      <div class="features">
+        <div class="card">
+          <h3>Registrácia používateľa</h3>
+          <p>Overenie e-mailu a úspešné vytvorenie účtu.</p>
+        </div>
+        <div class="card">
+          <h3>Pridanie modulu</h3>
+          <p>Administrátor nahrá obsah bez chýb.</p>
+        </div>
+        <div class="card">
+          <h3>Gamifikačný systém</h3>
+          <p>Body sa správne ukladajú do profilu.</p>
+        </div>
+        <div class="card">
+          <h3>Bezpečnosť prihlásenia</h3>
+          <p>Po viacerých neúspešných pokusoch sa účet zablokuje.</p>
+        </div>
+        <div class="card">
+          <h3>Zber spätnej väzby</h3>
+          <p>Dáta sa ukladajú a zobrazujú v reporte.</p>
+        </div>
+        <div class="card">
+          <h3>Výkon systému</h3>
+          <p>50 používateľov naraz – načítanie do 3 sekúnd.</p>
+        </div>
+      </div>
+      <div style="text-align: center; margin-top: 20px">
+        <a href="metriky.png" download>
+          <button>📥 Stiahnuť kompletné metriky</button>
+        </a>
+      </div>
+    </section>
+    <section id="gamifikacia">
+      <h2>🎮 Ako funguje gamifikácia?</h2>
+      <p>
+        Študenti denne odpovedajú na otázky o svojich návykoch. Za správne a
+        ekologické správanie získavajú body a postupujú v rebríčku.
+      </p>
+    </section>
+    <section id="dotaznik">
+      <h2>✅ Vyskúšaj ekologický dotazník</h2>
+      <button id="dotaznikButton">Začať dotazník</button>
+      <div id="questions">
+        <div id="question"></div>
+        <div id="options"></div>
+      </div>
+    </section>
+    <section id="kontakt">
+      <h2>📞 Kontakt</h2>
+      <p>Email: ecohub@schoolproject.sk</p>
+      <p>Škola: Univerzitný projekt</p>
+    </section>
+    <footer><p>© 2025 ECOHUB – Univerzitný projekt</p></footer>
     <script>
       document.addEventListener("DOMContentLoaded", () => {
         const questionElement = document.getElementById("question");
@@ -50,7 +358,6 @@
         dotaznikButton.addEventListener("click", () => {
           let currentQuestion = 0;
           let body = 0;
-
           const questions = [
             {
               question: "Ako dlho sa dnes sprchoval?",
@@ -62,10 +369,13 @@
               },
             },
             {
-              question: "Vypol svetlo vždy, keď odchádzal?",
+              question: "Vypol si svetlo vždy, keď si odchádzal?",
               options: { Ano: 3, Nie: 0 },
             },
-            { question: "Triedil odpad správne?", options: { Ano: 3, Nie: 0 } },
+            {
+              question: "Triedil si odpad správne?",
+              options: { Ano: 3, Nie: 0 },
+            },
             {
               question: "Koľko minút aktívneho pohybu dnes?",
               options: {
@@ -76,24 +386,23 @@
               },
             },
             {
-              question: "Koľko pohárov vody si vypil dnes?",
+              question: "Koľko pohárov vody si dnes vypil?",
               options: { "0–2": 0, "3–5": 2, "6–8": 4, "9+": 3 },
             },
             {
-              question: "Koľko hodín si spal poslednú noc?",
+              question: "Koľko hodín si spal?",
               options: { "<5 h": 0, "5–6 h": 1, "7–8 h": 3, "9+ h": 2 },
             },
           ];
-
           function showQuestions() {
             const q = questions[currentQuestion];
             questionElement.innerText = q.question;
             optionsElement.innerHTML = "";
-            Object.entries(q.options).forEach(([optionText, points]) => {
-              const button = document.createElement("button");
-              button.innerText = optionText;
-              optionsElement.appendChild(button);
-              button.addEventListener("click", () => selectAnswer(points));
+            Object.entries(q.options).forEach(([text, points]) => {
+              const btn = document.createElement("button");
+              btn.innerText = text;
+              btn.onclick = () => selectAnswer(points);
+              optionsElement.appendChild(btn);
             });
           }
           function selectAnswer(points) {
@@ -102,11 +411,8 @@
             if (currentQuestion < questions.length) {
               showQuestions();
             } else {
-              showResult();
+              questionBox.innerHTML = `<h3>Tvoje skóre: ${body} bodov ✅</h3>`;
             }
-          }
-          function showResult() {
-            questionBox.innerHTML = `<p>Vaše skóre ${body}</p>`;
           }
           showQuestions();
         });
